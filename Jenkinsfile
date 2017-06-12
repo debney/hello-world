@@ -34,7 +34,7 @@ pipeline {
       steps {
         echo 'Deploying....'
         pwd(tmp: true)
-        build 'build'
+        build 'Build'
       }
     }
   }
