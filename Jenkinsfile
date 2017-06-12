@@ -5,8 +5,9 @@ pipeline {
             steps {
 		            echo 'Building..'
                 sh '''cd build
+                pwd
                 make
-                java Build
+                java build
                 #rm -f build.jar build.class
                 '''
             }
