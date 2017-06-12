@@ -20,6 +20,7 @@ pipeline {
           },
           "integration": {
             echo 'integration testing'
+            sleep 10
 
           }
         )
@@ -33,6 +34,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
+
       }
     }
   }
