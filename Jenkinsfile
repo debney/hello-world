@@ -14,10 +14,10 @@ pipeline {
 
         stage('Testing Phase 1') {
             steps {
-                parallel test1: {
+                parallel unit: {
                     echo 'unit testing'
                 },
-                test2: {
+                integration: {
                     echo 'integration testing'
                 }
             }
