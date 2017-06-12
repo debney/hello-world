@@ -21,19 +21,16 @@ pipeline {
                     echo 'integration testing'
                 }
             }
+        }
        stage('Testing Phase 2') {
            steps {
                echo 'System testing'
            }
-
        }
-
-        }
-
-        stage('Deploy') {
+       stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
-        }
-    }
+      }
+   }
 }
