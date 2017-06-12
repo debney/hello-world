@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+     checkout scm 
     stages {
         stage('Build') {
             steps {
@@ -18,5 +18,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+	stage('Blar') {
+	   steps { 
+		echo ' balr ......'
+	   }
+	}
     }
 }
