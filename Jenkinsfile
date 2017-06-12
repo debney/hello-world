@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Testing ') {
+        stage('Testing Phase 1') {
             steps {
                 parallel test1: {
                     echo 'unit testing'
@@ -21,9 +21,12 @@ pipeline {
                     echo 'integration testing'
                 }
             }
-            steps {
-              echo 'System testing'
-            }
+       stage('Testing Phase 2') {
+           steps {
+               echo 'System testing'
+           }
+
+       }
 
         }
 
