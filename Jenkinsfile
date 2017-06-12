@@ -3,8 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-
-		echo 'Building..'
+		            echo 'Building..'
+                cd build
+                make
+                java Build
+                rm -f build.jar build.class
             }
         }
         stage('Test') {
@@ -18,7 +21,7 @@ pipeline {
             }
         }
 	stage('Blar') {
-	   steps { 
+	   steps {
 		echo ' balr ......'
 	   }
 	}
