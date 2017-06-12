@@ -5,10 +5,10 @@ pipeline {
             steps {
 		            echo 'Building..'
                 sh '''cd build
-                pwd
-                make
-                java build
+                #make
+                #java build
                 #rm -f build.jar build.class
+                echo 'building some major stuff right here....'
                 '''
             }
         }
