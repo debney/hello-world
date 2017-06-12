@@ -16,11 +16,11 @@ pipeline {
         parallel(
           "unit": {
             echo 'unit testing'
-            
+
           },
           "integration": {
             echo 'integration testing'
-            
+
           }
         )
       }
@@ -33,8 +33,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        pwd(tmp: true)
-        build 'Build'
+    
       }
     }
   }
