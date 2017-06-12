@@ -16,11 +16,11 @@ pipeline {
         parallel(
           "unit": {
             echo 'unit testing'
-            
+
           },
           "integration": {
             echo 'integration testing'
-            
+
           }
         )
       }
@@ -33,7 +33,6 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sleep 10
       }
     }
   }
