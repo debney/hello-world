@@ -14,18 +14,17 @@ pipeline {
         }
 
         stage('Test'){
-          parallel (
-            "JUnit": {
-                echo "echo JUnit"
-                },
 
-            "DBUnit": {
-                sh "echo DBUnit"
-                },
-            "Jasmine": {
-                sh "echo Jasmine"
-              },
-              )
+          parallel Test1: {
+          echo 'test1'
+
+
+      }, Test2: {
+          echo 'test2'
+      }
+
+
+
         }
 
         stage('Deploy') {
