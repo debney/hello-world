@@ -12,15 +12,19 @@ pipeline {
             }
         }
 
-        stage('Test2') {
+        stage('Testing ') {
             steps {
                 parallel test1: {
-                    echo 'test1'
+                    echo 'unit testing'
                 },
                 test2: {
-                    echo 'test2'
+                    echo 'integration testing'
                 }
             }
+            steps {
+              echo 'System testing'
+            }
+
         }
 
         stage('Deploy') {
