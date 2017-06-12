@@ -4,10 +4,11 @@ pipeline {
         stage('Build') {
             steps {
 		            echo 'Building..'
-                cd build
+                sh '''cd build
                 make
                 java Build
-                rm -f build.jar build.class
+                #rm -f build.jar build.class
+                '''
             }
         }
         stage('Test') {
