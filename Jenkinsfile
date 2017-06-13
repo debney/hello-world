@@ -4,6 +4,7 @@ pipeline {
     stage('make bake') {
       steps {
         echo 'Building..'
+        sleep 10
         sh '''cd build
                 #make
                 #java build
@@ -16,6 +17,7 @@ pipeline {
         parallel(
           "unit": {
             echo 'unit testing'
+            sleep 5
             
           },
           "integration": {
