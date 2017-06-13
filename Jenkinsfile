@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Make Bake') {
       steps {
         echo 'Building..'
         sh '''cd build
@@ -11,7 +11,7 @@ pipeline {
                 echo "building some major stuff right here...." '''
       }
     }
-    stage('Testing Phase 1') {
+    stage('Make Test 1') {
       steps {
         parallel(
           "unit": {
@@ -26,12 +26,12 @@ pipeline {
         )
       }
     }
-    stage('Testing Phase 2') {
+    stage('Make Test 2') {
       steps {
         echo 'System testing'
       }
     }
-    stage('Deploy') {
+    stage('Make Deploy') {
       steps {
         echo 'Deploying....'
         sleep 5
@@ -39,3 +39,7 @@ pipeline {
     }
   }
 }
+
+
+
+
