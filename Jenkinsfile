@@ -17,6 +17,7 @@ pipeline {
           steps {
             checkpoint 'Completed Build'
           }
+        }  
           
     stage('make test') {
       steps {
