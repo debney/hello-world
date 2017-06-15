@@ -26,8 +26,6 @@ pipeline {
             
           }
         )
-      
-        checkpoint "tests done" 
       }
     }
     stage('make deploy') {
