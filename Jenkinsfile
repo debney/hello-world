@@ -12,13 +12,6 @@ pipeline {
                 echo "building some major stuff right here...." '''
       }
     }
-    stage('Checkpoint') {
-          agent none
-          steps {
-            checkpoint 'Completed Build'
-          }
-        }  
-          
     stage('make test') {
       steps {
         parallel(
@@ -35,7 +28,6 @@ pipeline {
         )
       }
     }
-    
     stage('make deploy') {
       steps {
         echo 'Deploying....'
