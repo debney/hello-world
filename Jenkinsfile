@@ -6,8 +6,8 @@ pipeline {
         echo 'Building..'
         sleep 10
         sh '''cd build
-                #make
-                #java build
+                make
+                java build
                 #rm -f build.jar build.class
                 echo "building some major stuff right here...." '''
       }
