@@ -21,9 +21,7 @@ pipeline {
             
           },
           "integration": {
-            echo 'integration testing'
-            sleep 10
-            
+            echo 'integration testing'     
           }
         )
       }
